@@ -21,6 +21,8 @@ app.get("/", function(req, res) {
   res.json({ tutorial: "Build REST API with Node.js" });
 });
 
+app.use("/users", users);
+
 app.use("/movies", validatUser, movies);
 
 app.get("/favicons.ico", function(req, res) {
