@@ -9,6 +9,10 @@ const app = express();
 
 app.set("secretKey", "nodeRestApi");
 
+mongoose.connection.once('open', function() {
+  console.log('Connection has been made!!!')
+});
+
 mongoose.connection.on(
   "error",
   console.error.bind(console, "MongoDB connection error:")
