@@ -10,7 +10,7 @@ const app = express();
 app.set("secretKey", "nodeRestApi");
 
 // mongoose.connection.once('open', function() {
-//   console.log('Connection has been made!!!')
+//   console.log('Connection has been made!!!');
 // });
 
 mongoose.connection.on("connected", function() {
