@@ -34,7 +34,7 @@ app.get("/favicons.ico", function(req, res) {
 });
 
 function validatUser(req, res, next) {
-  jst.verify(req.headers["x-access-token"], req.app.get("secretKey"), function(
+  jwt.verify(req.headers["x-access-token"], req.app.get("secretKey"), function(
     err,
     decoded
   ) {

@@ -1,4 +1,4 @@
-const movieModel = require("../controllers/users");
+const movieModel = require("../models/movies");
 
 module.exports = {
   getById: function(req, res, next) {
