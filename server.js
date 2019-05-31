@@ -13,11 +13,12 @@ app.set("secretKey", "nodeRestApi");
 //   console.log('Connection has been made!!!')
 // });
 
-mongoose.connection.on('connected', function() {
-  console.log('Connection has been made!!!')
-})
+mongoose.connection.on("connected", function() {
+  console.log("Connection has been made!!!");
+});
 
-mongoose.connection.on("error",
+mongoose.connection.on(
+  "error",
   console.error.bind(console, "MongoDB connection error:")
 );
 
